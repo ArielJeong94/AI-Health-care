@@ -5,9 +5,13 @@
 CLI, Git & GitHub, VSCode 환경 설정, Python 기초, CS 배경지식 등을 차근차근 기록합니다.
 
 ## 폴더 구조
-- `/cli` : 터미널 명령어, zsh 환경 정리, 실습 로그
-- `/git_github` : Git & GitHub 개념, 잔디 심기 연습, 워크플로우 정리
-- `/vscode` : VSCode 설치, 확장 프로그램, 설정 관련 노트
+- `/new_beginner/Beginner-track` : 부트캠프 실습 로그
+- `/personal training` : 개인 연습 공간
+- `/AI Health care study` : 학습 내용 정리 공간
+- `/AI Health care study/vscode` : VSCode 설치, 확장 프로그램, 설정 관련 노트
+- `/AI Health care study/CLI` : Terminal & CLI 개념
+- `/AI Health care study/git_github` : Git & GitHub 개념, 잔디 심기 연습, 워크플로우 정리
+- `/AI Health care study/HTML & CSS` : HTML & CSS 요소 정리 
 - `/python_basic` : 파이썬 기초 문법과 연습 코드
 - `/notes` : 강의나 글을 보고 정리한 학습 메모
 

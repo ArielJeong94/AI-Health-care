@@ -1,0 +1,64 @@
+body {
+    background-color:#c7f5ff;
+    font-family: Impact, Charcoal, sans-serif;
+    font-weight: bold;
+    color: #273538;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+th, td {
+    background-color: #96D4D4;
+    width: 25%;
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+ul {
+    font-size: 120%;
+}
+
+#group1 {
+    background-color: beige;
+}
+
+#group2 {
+    background-color: wheat;
+}
+
+#group3 {
+    background-color: whitesmoke;
+}
+
+a:link {
+    color: #273538;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6aed4;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.layout {
+    display: flex;          /* 가로로 나란히 배치 */
+    gap: 16px;              /* 컬럼 사이 여백 */
+}
+
+/* 메인 영역이 더 넓게 */
+.layout main {
+    flex: 2;
+}
+
+/* aside는 조금 더 좁게 */
+.layout side {
+    flex: 1;
+}
