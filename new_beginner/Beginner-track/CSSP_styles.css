@@ -1,0 +1,23 @@
+.box {
+    width: 90%; /* 부모 요소 너비의 90% */
+    padding: 1rem; /* 기본 글꼴 크기의 1배 */
+    border: 5px solid black;
+    margin: 25px; /* 25 픽셀 */
+    font-size: 2em; /* 현재 글꼴 크기의 2배 */
+}
+
+p {
+    color: blue; /* 태그 선택자 */
+}
+
+.highlight {
+    color: red; /* 클래스 선택자 */
+}
+
+#unique {
+    color: green; /* ID 선택자 */
+}
+
+p.inline-style {
+    color: yellow !important;
+}
