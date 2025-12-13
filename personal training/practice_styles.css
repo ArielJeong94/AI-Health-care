@@ -1,3 +1,50 @@
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: #96D4D4; /* blue background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #555; /* Add a hover color_dark-grey */
+}
+
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
 body {
     background-color:#c7f5ff;
     font-family: Impact, Charcoal, sans-serif;
@@ -6,22 +53,21 @@ body {
     margin-bottom: 10px;
 }
 
-table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
-}
-th, td {
-    background-color: #96D4D4;
-    width: 25%;
-    font-size: 150%;
-}
-
 h2 {
     font-size: 200%;
 }
 
+div {
+    padding: 2px;
+}
+
 ul {
     font-size: 120%;
+}
+
+.box {
+    position: left;
+    width: 1100px;
 }
 
 #group1 {
@@ -34,6 +80,10 @@ ul {
 
 #group3 {
     background-color: whitesmoke;
+    position: relative;
+    left: 1200px;
+    width: 500px;
+    height: auto;
 }
 
 a:link {
@@ -48,17 +98,3 @@ a:hover {
     text-decoration: underline;
 }
 
-.layout {
-    display: flex;          /* 가로로 나란히 배치 */
-    gap: 16px;              /* 컬럼 사이 여백 */
-}
-
-/* 메인 영역이 더 넓게 */
-.layout main {
-    flex: 2;
-}
-
-/* aside는 조금 더 좁게 */
-.layout side {
-    flex: 1;
-}
