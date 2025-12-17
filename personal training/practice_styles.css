@@ -21,28 +21,80 @@
     transform: translate(0, -11px) rotate(45deg);
 }
 
-.icon-bar {
-  width: 100%; /* Full-width */
-  background-color: #96D4D4; /* blue background */
-  overflow: auto; /* Overflow due to float */
+/* 아이콘바*/
+.icon-bar{
+    position: relative;
+    width: 100%;
+    background-color: #96D4D4;
+    overflow: auto; 
 }
 
-.icon-bar a {
-  float: left; /* Float links side by side */
-  text-align: center; /* Center-align text */
-  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
-  padding: 12px 0; /* Some top and bottom padding */
-  transition: all 0.3s ease; /* Add transition for hover effects */
-  color: white; /* White text color */
-  font-size: 36px; /* Increased font size */
+.icon-bar::after{
+    content:"";
+    display:block;
+    clear:both;
 }
 
-.icon-bar a:hover {
-  background-color: #555; /* Add a hover color_dark-grey */
+
+/* 햄버거+메뉴 묶음: 첫 칸 차지 */
+.dropdown{
+    position: relative;   /* dropdown-menu의 기준점 */
+    float: left;
+    width: 25%;           /* 4칸이면 25% */
+    text-align: center;
 }
 
-.active {
-  background-color: #04AA6D; /* Add an active/current color */
+/* 버튼 자체 */
+.hamburger{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 12px 0;
+}
+
+/* 햄버거 줄 */
+.hamburger .bar{
+    display: block;
+    width: 36px;
+    height: 5px;
+    margin: 6px auto;
+    border-radius: 6px;
+    background: #fff;
+}
+.hamburger .bar2{ background: #e6aed4; } /* 가운데만 핑크 */
+
+/* 숨길 대상은 dropdown-menu */
+.dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 260px;
+    display: none;
+    z-index: 9999;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 토글되면 보이기 */
+.dropdown-menu.show{
+    display: block;
+}
+
+/* 나머지 메뉴들 */
+.icon-bar #IB a{
+    float: left;
+    display: flex;
+    width: 75%;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration:none;
+}
+
+.icon-bar a:hover{
+    background-color: #333;
+    color: #e6aed4;
 }
 
 body {
@@ -66,7 +118,8 @@ ul {
 }
 
 .box {
-    position: left;
+    position: right;
+    margin-left: 460px;
     width: 1100px;
 }
 
@@ -80,9 +133,6 @@ ul {
 
 #group3 {
     background-color: whitesmoke;
-    position: relative;
-    left: 1200px;
-    width: 500px;
     height: auto;
 }
 

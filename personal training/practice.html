@@ -10,28 +10,46 @@
         <link rel="shortcut icon" href="favicon_io/favicon.ico" />
         <link rel="icon" href="favicon_io/favicon-32x32.png?v=10">
         <link rel="stylesheet" href="practice_styles.css" />
+        <script src="practice.js" defer></script>
     </head>
     <body>
         <header>
         <H1 style="font-size:300%; text-align:center;">&#x1F40B; Hometown for Ariel &#x1F40B;</H1>
         <p style="text-align:center;">Here is my personal space to do everything</p>
         </header>
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+        
+        <div class="icon-bar">
+            <a class="dropdown">
+                <button class="hamburger" id="hamburgerBtn" type="button" aria-expanded="false">
+                    <div class="container">
+                    <div class="bar1" style="background-color:white;"></div>
+                    <div class="bar2" style="background-color:#e6aed4;"></div>
+                    <div class="bar3" style="background-color:white;"></div>
+                    </div>
+                </button>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div id="group3">
+                        <h2>&#x1F4CC; To Do List</h2>
+                            <ol>
+                                <li> 새로운 태그 사용해보기</li>
+                                <li> 잔디 심기</li>
+                                <br>
+                            </ol>
+                    </div>
+                </div>
+            </a>
+            <menu id="menu">
+            <a href="#Education"><i>&#x1F4BB; Education</i></a>
+            <a href="#Career"><i>&#x1F4BC; Career</i></a>
+            <a href="#Play-List"><i>&#x1F3AE; Play-List</i></a>
+            </menu>
         </div>
-            <table style="width:100%">
-                <tr>
-                    <th>Education</th>
-                    <th>Career</th>
-                    <th>To Do List</th>
-                    <th>Play List</th>
-                </tr>
-            </table>
                 <br>
+        
             <div class="box">
             <div id="group1">
+            <section id="Education">
             <H2>&#x1F4BB; Education</H2>
             <ul style="font-size:120%;">
                 <li><a href="https://velog.io/@jkh3043/학습-일기-1-Visual-Studio-Code를-설치하며-기본적인-개념을-다져본-하루">Visual Studio Code</a></li>
@@ -46,9 +64,11 @@
                 <br>
                 </dl>
             </ul>
+            </section>
             </div>
             <br>
             <div id="group2">
+            <section id="Career">
             <H2>&#x1F4BC; Career</H2>
             <ul style="font-size:120%;">
                 <li>Portfolio</li>
@@ -56,24 +76,18 @@
                 <li>Notion</li>
                 <br>
             </ul>
+            </section>
             </div>
             <br>
             <div id="group1">
-            <H2>&#x1F3AE; Play List</H2>
+            <section id="Play-List">
+            <H2>&#x1F3AE; Play-List</H2>
             <ul style="font-size:120%;">
                 <li><a href="https://www.youtube.com">YouTube</a></li>
                 <br>
             </ul>
-            </div>
+            </section>
             </div>
             <br>
-            <div id="group3">
-            <h2>&#x1F4CC; To Do List</h2>
-            <ol>
-                <li> 새로운 태그 사용해보기</li>
-                <li> 잔디 심기</li>
-                <br>
-            </ol>
-            </div>
     </body>
 </html>
