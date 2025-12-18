@@ -19,34 +19,30 @@
         </header>
         
         <div class="icon-bar">
-            <a class="dropdown">
-                <button class="hamburger" id="hamburgerBtn" type="button" aria-expanded="false">
-                    <div class="container">
-                    <div class="bar1" style="background-color:white;"></div>
-                    <div class="bar2" style="background-color:#e6aed4;"></div>
-                    <div class="bar3" style="background-color:white;"></div>
-                    </div>
-                </button>
-
-                <div class="dropdown-menu" id="dropdownMenu">
-                    <div id="group3">
-                        <h2>&#x1F4CC; To Do List</h2>
-                            <ol>
-                                <li> 새로운 태그 사용해보기</li>
-                                <li> 잔디 심기</li>
-                                <br>
-                            </ol>
-                    </div>
-                </div>
-            </a>
+            <button class="hamburger" id="hamburgerBtn" type="button" aria-expanded="false" aria-controls="dropdownMenu">
+                <a class="container">
+                <div class="bar1" style="background-color:white;"></div>
+                <div class="bar2" style="background-color:#e6aed4;"></div>
+                <div class="bar3" style="background-color:white;"></div>
+                </a>
+            </button>
             <menu id="menu">
             <a href="#Education"><i>&#x1F4BB; Education</i></a>
             <a href="#Career"><i>&#x1F4BC; Career</i></a>
             <a href="#Play-List"><i>&#x1F3AE; Play-List</i></a>
             </menu>
         </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div id="group3">
+                <h2>&#x1F4CC; To Do List</h2>
+                    <ol>
+                        <li> 새로운 태그 사용해보기</li>
+                        <li> 잔디 심기</li>
+                        <br>
+                    </ol>
+            </div>
+        </div>
                 <br>
-        
             <div class="box">
             <div id="group1">
             <section id="Education">

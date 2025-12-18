@@ -1,59 +1,39 @@
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
-}
-
 /* 아이콘바*/
 .icon-bar{
-    position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
     background-color: #96D4D4;
-    overflow: auto; 
-}
-
-.icon-bar::after{
-    content:"";
-    display:block;
-    clear:both;
-}
-
-
-/* 햄버거+메뉴 묶음: 첫 칸 차지 */
-.dropdown{
-    position: relative;   /* dropdown-menu의 기준점 */
-    float: left;
-    width: 25%;           /* 4칸이면 25% */
-    text-align: center;
+    padding: 10px 14px;
+    box-sizing: border-box;
 }
 
 /* 버튼 자체 */
 .hamburger{
+    flex: 0 0 72px;
     border: none;
     background: transparent;
     cursor: pointer;
-    padding: 12px 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 메뉴 3개에 대한 정보*/
+#menu {
+    flex: 1;    /* 남은 공간 전부 사용*/
+    display: flex;
+    justify-content: space-around;    /* 3개를 고르게 배치*/
+    align-items: center;
+    gap: 12px;    /* 메뉴 사이 최소 간격*/
+    margin: 0;
+    padding: 0;    
 }
 
 /* 햄버거 줄 */
-.hamburger .bar{
+.hamburger .bar1,
+.hamburger .bar2,
+.hamburger .bar3 {
     display: block;
     width: 36px;
     height: 5px;
@@ -61,38 +41,48 @@
     border-radius: 6px;
     background: #fff;
 }
+.bar1 {
+    top: 0;
+}
+.bar2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bar3 {
+    bottom: 0;
+}
 .hamburger .bar2{ background: #e6aed4; } /* 가운데만 핑크 */
 
 /* 숨길 대상은 dropdown-menu */
 .dropdown-menu{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 260px;
-    display: none;
-    z-index: 9999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease;
     background: #fff;
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    margin: 0 10px;
 }
 
 /* 토글되면 보이기 */
 .dropdown-menu.show{
-    display: block;
+    max-height: 260px;
+    width: flex;
+    padding: 12px;
 }
 
-/* 나머지 메뉴들 */
-.icon-bar #IB a{
-    float: left;
-    display: flex;
-    width: 75%;
+.icon-bar #menu a{
+    flex: 1;
+    font-size: 300%;
+    color: white;
     text-align: center;
-    padding: 12px 0;
+    padding-left: 1px;
     text-decoration:none;
+    white-space: nowrap;    /* 줄바꿈 방지 */
 }
 
-.icon-bar a:hover{
+.icon-bar #menu a:hover{
     background-color: #333;
     color: #e6aed4;
 }
@@ -119,8 +109,7 @@ ul {
 
 .box {
     position: right;
-    margin-left: 460px;
-    width: 1100px;
+    width: flex;
 }
 
 #group1 {

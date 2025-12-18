@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("hamburgerBtn");
-    const menu = document.getElementById("dropdownMenu");
+        const btn = document.getElementById("hamburgerBtn");
+        const menu = document.getElementById("dropdownMenu");
 
     function closeMenu() {
         menu.classList.remove("show");
