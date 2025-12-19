@@ -42,11 +42,11 @@
     background: #fff;
 }
 .bar1 {
-    top: 0;
+    top: 0%;
 }
 .bar2 {
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-8%);
 }
 .bar3 {
     bottom: 0;
